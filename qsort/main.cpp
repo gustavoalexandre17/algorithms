@@ -27,7 +27,11 @@ int parse(vector<int> &v, int begin, int end) {
 void quicksort(vector<int> &v, int begin, int end) {
   if (begin < end) {
     int pivotIndex = parse(v, begin, end);
+
+    // elementos menores que o pivo
     quicksort(v, begin, pivotIndex - 1);
+
+    // elementos maiores que o pivo
     quicksort(v, pivotIndex + 1, end);
   }
 }
